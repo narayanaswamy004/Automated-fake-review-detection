@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fake Review Detection</h1>
+
+    <div class="button-container">
+        <button id="singleReviewBtn">Single Review Detection</button>
+        <button id="multipleReviewBtn">Multiple Reviews Detection</button>
+    </div>
+
+    <!-- Single Review Detection -->
+    <div id="singleReviewSection" class="hidden">
+        <h2>Enter Your Review</h2>
+        <textarea id="reviewText" placeholder="Enter your review here..."></textarea>
+        <button id="analyzeSingleBtn">Analyze</button>
+        <p id="singleReviewResult"></p>
+    </div>
+
+    <!-- Multiple Review Detection -->
+    <div id="multipleReviewSection" class="hidden">
+        <h2>Upload a File or Enter Amazon Product URL</h2>
+        <input type="file" id="fileUpload">
+        <input type="text" id="urlInput" placeholder="Enter Amazon product page URL...">
+        <button id="analyzeMultipleBtn">Analyze</button>
+        <div id="multipleReviewResults"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
